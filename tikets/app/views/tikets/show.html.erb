@@ -1,0 +1,32 @@
+<p>
+  <b>Name:</b>
+  <%=h @tiket.name %>
+</p>
+
+<p>
+  <b>Seat:</b>
+  <%=h @tiket.seat_id %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%=h @tiket.address %>
+</p>
+
+<p>
+  <b>Price paid:</b>
+  <%=h @tiket.price_paid %>
+</p>
+
+<p>
+  <b>Email address:</b>
+  <%=h @tiket.email_address %>
+</p>
+<p>
+  <b>phone:</b>
+  <%=h @tiket.phone %>
+</p>
+
+
+<%= link_to 'Edit', edit_tiket_path(@tiket) %> |
+<%= link_to 'Back', tikets_path %>

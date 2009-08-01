@@ -1,0 +1,30 @@
+<h1>Listing tikets</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Seat</th>
+    <th>Address</th>
+    <th>Price paid</th>
+    <th>Email address</th>
+    <th>phone</th>
+  </tr>
+
+<% @tikets.each do |tiket| %>
+  <tr>
+    <td><%=h tiket.name %></td>
+    <td><%=h tiket.seat_id %></td>
+    <td><%=h tiket.address %></td>
+    <td><%=h tiket.price_paid %></td>
+    <td><%=h tiket.email_address %></td>
+    <td><%=h tiket.phone %></td>
+    <td><%= link_to 'Show', tiket %></td>
+    <td><%= link_to 'Edit', edit_tiket_path(tiket) %></td>
+    <td><%= link_to 'Destroy', tiket, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New tiket', new_tiket_path %>

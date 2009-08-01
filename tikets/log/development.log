@@ -1,0 +1,586 @@
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-02 22:55:14) [GET]
+
+ActionController::RoutingError (No route matches "/tickets" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-02 22:55:17) [GET]
+
+ActionController::RoutingError (No route matches "/tikets" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-02 22:55:57) [GET]
+
+ActionController::RoutingError (No route matches "/tikets" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (110.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (94.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTikets (20090802150053)
+  [4;36;1mSQL (16.0ms)[0m   [0;1mCREATE TABLE "tikets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "seat_id" varchar(255), "address" text, "price_paid" decimal, "email_address" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090802150053')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("tikets")[0m
+
+
+Processing TiketsController#index (for 127.0.0.1 at 2009-08-02 23:02:20) [GET]
+  [4;36;1mTiket Load (0.0ms)[0m   [0;1mSELECT * FROM "tikets" [0m
+Rendering template within layouts/tikets
+Rendering tikets/index
+Completed in 1704ms (View: 1672, DB: 0) | 200 OK [http://localhost/tikets]
+
+
+Processing TiketsController#new (for 127.0.0.1 at 2009-08-02 23:02:38) [GET]
+Rendering template within layouts/tikets
+Rendering tikets/new
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/tikets/new]
+
+
+Processing TiketsController#create (for 127.0.0.1 at 2009-08-02 23:05:25) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"NIOc+PcX95/GsJzjMxylhz7Xm9H6xZr7n/y/2ONQVAo=", "tiket"=>{"name"=>"Seri", "seat_id"=>"1A", "price_paid"=>"30.00", "address"=>"Kuala Lumpur", "email_address"=>"seri@yahoo.com"}}
+  [4;35;1mTiket Create (31.0ms)[0m   [0mINSERT INTO "tikets" ("name", "updated_at", "seat_id", "price_paid", "address", "email_address", "created_at") VALUES('Seri', '2009-08-02 15:05:25', '1A', 30.0, 'Kuala Lumpur', 'seri@yahoo.com', '2009-08-02 15:05:25')[0m
+Redirected to http://localhost:3000/tikets/1
+Completed in 391ms (DB: 31) | 302 Found [http://localhost/tikets]
+
+
+Processing TiketsController#show (for 127.0.0.1 at 2009-08-02 23:05:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTiket Load (0.0ms)[0m   [0;1mSELECT * FROM "tikets" WHERE ("tikets"."id" = 1) [0m
+Rendering template within layouts/tikets
+Rendering tikets/show
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/tikets/1]
+
+
+Processing TiketsController#index (for 127.0.0.1 at 2009-08-02 23:05:31) [GET]
+  [4;35;1mTiket Load (0.0ms)[0m   [0mSELECT * FROM "tikets" [0m
+Rendering template within layouts/tikets
+Rendering tikets/index
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/tikets]
+
+
+Processing TiketsController#new (for 127.0.0.1 at 2009-08-02 23:05:34) [GET]
+Rendering template within layouts/tikets
+Rendering tikets/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/tikets/new]
+
+
+Processing TiketsController#create (for 127.0.0.1 at 2009-08-02 23:06:07) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"NIOc+PcX95/GsJzjMxylhz7Xm9H6xZr7n/y/2ONQVAo=", "tiket"=>{"name"=>"Nori", "seat_id"=>"2B", "price_paid"=>"50.00", "address"=>"Kajang", "email_address"=>"nori@yahoo.com.my"}}
+  [4;36;1mTiket Create (0.0ms)[0m   [0;1mINSERT INTO "tikets" ("name", "updated_at", "seat_id", "price_paid", "address", "email_address", "created_at") VALUES('Nori', '2009-08-02 15:06:07', '2B', 50.0, 'Kajang', 'nori@yahoo.com.my', '2009-08-02 15:06:07')[0m
+Redirected to http://localhost:3000/tikets/2
+Completed in 203ms (DB: 0) | 302 Found [http://localhost/tikets]
+
+
+Processing TiketsController#show (for 127.0.0.1 at 2009-08-02 23:06:07) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mTiket Load (0.0ms)[0m   [0mSELECT * FROM "tikets" WHERE ("tikets"."id" = 2) [0m
+Rendering template within layouts/tikets
+Rendering tikets/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/tikets/2]
+
+
+Processing TiketsController#index (for 127.0.0.1 at 2009-08-02 23:06:10) [GET]
+  [4;36;1mTiket Load (0.0ms)[0m   [0;1mSELECT * FROM "tikets" [0m
+Rendering template within layouts/tikets
+Rendering tikets/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/tikets]
+
+
+Processing TiketsController#new (for 127.0.0.1 at 2009-08-02 23:06:13) [GET]
+Rendering template within layouts/tikets
+Rendering tikets/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/tikets/new]
+
+
+Processing TiketsController#create (for 127.0.0.1 at 2009-08-02 23:06:45) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"NIOc+PcX95/GsJzjMxylhz7Xm9H6xZr7n/y/2ONQVAo=", "tiket"=>{"name"=>"Azie", "seat_id"=>"3C", "price_paid"=>"30.00", "address"=>"Bangi", "email_address"=>"azie@yahoo.com"}}
+  [4;35;1mTiket Create (0.0ms)[0m   [0mINSERT INTO "tikets" ("name", "updated_at", "seat_id", "price_paid", "address", "email_address", "created_at") VALUES('Azie', '2009-08-02 15:06:45', '3C', 30.0, 'Bangi', 'azie@yahoo.com', '2009-08-02 15:06:45')[0m
+Redirected to http://localhost:3000/tikets/3
+Completed in 187ms (DB: 0) | 302 Found [http://localhost/tikets]
+
+
+Processing TiketsController#show (for 127.0.0.1 at 2009-08-02 23:06:46) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mTiket Load (0.0ms)[0m   [0;1mSELECT * FROM "tikets" WHERE ("tikets"."id" = 3) [0m
+Rendering template within layouts/tikets
+Rendering tikets/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/tikets/3]
+
+
+Processing TiketsController#index (for 127.0.0.1 at 2009-08-02 23:06:49) [GET]
+  [4;35;1mTiket Load (0.0ms)[0m   [0mSELECT * FROM "tikets" [0m
+Rendering template within layouts/tikets
+Rendering tikets/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/tikets]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTikets (20090802150053)
+Migrating to Addphonetotikets (20090802150857)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090802150857')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("tikets")[0m
+
+
+Processing TiketsController#index (for 127.0.0.1 at 2009-08-02 23:16:25) [GET]
+  [4;36;1mTiket Load (0.0ms)[0m   [0;1mSELECT * FROM "tikets" [0m
+Rendering template within layouts/tikets
+Rendering tikets/index
+
+ActionView::TemplateError (undefined method `phone' for #<Tiket:0x34575d8>) on line #20 of app/views/tikets/index.html.erb:
+17:     <td><%=h tiket.address %></td>
+18:     <td><%=h tiket.price_paid %></td>
+19:     <td><%=h tiket.email_address %></td>
+20:     <td><%=h tiket.phone %></td>
+21:     <td><%= link_to 'Show', tiket %></td>
+22:     <td><%= link_to 'Edit', edit_tiket_path(tiket) %></td>
+23:     <td><%= link_to 'Destroy', tiket, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/tikets/index.html.erb:20
+    app/views/tikets/index.html.erb:13:in `each'
+    app/views/tikets/index.html.erb:13
+    app/controllers/tikets_controller.rb:7:in `index'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TiketsController#index (for 127.0.0.1 at 2009-08-02 23:17:56) [GET]
+  [4;36;1mTiket Load (0.0ms)[0m   [0;1mSELECT * FROM "tikets" [0m
+Rendering template within layouts/tikets
+Rendering tikets/index
+
+ActionView::TemplateError (undefined method `phone' for #<Tiket:0x34a8cbc>) on line #20 of app/views/tikets/index.html.erb:
+17:     <td><%=h tiket.address %></td>
+18:     <td><%=h tiket.price_paid %></td>
+19:     <td><%=h tiket.email_address %></td>
+20:     <td><%=h tiket. phone %></td>
+21:     <td><%= link_to 'Show', tiket %></td>
+22:     <td><%= link_to 'Edit', edit_tiket_path(tiket) %></td>
+23:     <td><%= link_to 'Destroy', tiket, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/tikets/index.html.erb:20
+    app/views/tikets/index.html.erb:13:in `each'
+    app/views/tikets/index.html.erb:13
+    app/controllers/tikets_controller.rb:7:in `index'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (172.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TiketsController#index (for 127.0.0.1 at 2009-08-02 23:18:07) [GET]
+  [4;35;1mTiket Load (16.0ms)[0m   [0mSELECT * FROM "tikets" [0m
+Rendering template within layouts/tikets
+Rendering tikets/index
+
+ActionView::TemplateError (undefined method `phone' for #<Tiket:0x361945c>) on line #20 of app/views/tikets/index.html.erb:
+17:     <td><%=h tiket.address %></td>
+18:     <td><%=h tiket.price_paid %></td>
+19:     <td><%=h tiket.email_address %></td>
+20:     <td><%=h tiket. phone %></td>
+21:     <td><%= link_to 'Show', tiket %></td>
+22:     <td><%= link_to 'Edit', edit_tiket_path(tiket) %></td>
+23:     <td><%= link_to 'Destroy', tiket, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/tikets/index.html.erb:20
+    app/views/tikets/index.html.erb:13:in `each'
+    app/views/tikets/index.html.erb:13
+    app/controllers/tikets_controller.rb:7:in `index'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (187.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TiketsController#index (for 127.0.0.1 at 2009-08-02 23:18:50) [GET]
+  [4;36;1mTiket Load (0.0ms)[0m   [0;1mSELECT * FROM "tikets" [0m
+Rendering template within layouts/tikets
+Rendering tikets/index
+
+ActionView::TemplateError (undefined method `phone' for #<Tiket:0x379aa88>) on line #20 of app/views/tikets/index.html.erb:
+17:     <td><%=h tiket.address %></td>
+18:     <td><%=h tiket.price_paid %></td>
+19:     <td><%=h tiket.email_address %></td>
+20:     <td><%=h tiket.phone %></td>
+21:     <td><%= link_to 'Show', tiket %></td>
+22:     <td><%= link_to 'Edit', edit_tiket_path(tiket) %></td>
+23:     <td><%= link_to 'Destroy', tiket, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/tikets/index.html.erb:20
+    app/views/tikets/index.html.erb:13:in `each'
+    app/views/tikets/index.html.erb:13
+    app/controllers/tikets_controller.rb:7:in `index'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (94.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTikets (20090802150053)
+Migrating to Addphonetotikets (20090802152804)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090802152804')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("tikets")[0m
+
+
+Processing TiketsController#index (for 127.0.0.1 at 2009-08-02 23:29:13) [GET]
+  [4;36;1mTiket Load (0.0ms)[0m   [0;1mSELECT * FROM "tikets" [0m
+Rendering template within layouts/tikets
+Rendering tikets/index
+
+ActionView::TemplateError (undefined method `phone' for #<Tiket:0x34a8cbc>) on line #20 of app/views/tikets/index.html.erb:
+17:     <td><%=h tiket.address %></td>
+18:     <td><%=h tiket.price_paid %></td>
+19:     <td><%=h tiket.email_address %></td>
+20:     <td><%=h tiket.phone %></td>
+21:     <td><%= link_to 'Show', tiket %></td>
+22:     <td><%= link_to 'Edit', edit_tiket_path(tiket) %></td>
+23:     <td><%= link_to 'Destroy', tiket, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/tikets/index.html.erb:20
+    app/views/tikets/index.html.erb:13:in `each'
+    app/views/tikets/index.html.erb:13
+    app/controllers/tikets_controller.rb:7:in `index'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (172.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTikets (20090802150053)
+Migrating to AddPhoneTotikets (20090802153044)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090802153044')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("tikets")[0m
+
+
+Processing TiketsController#index (for 127.0.0.1 at 2009-08-02 23:31:53) [GET]
+  [4;36;1mTiket Load (0.0ms)[0m   [0;1mSELECT * FROM "tikets" [0m
+Rendering template within layouts/tikets
+Rendering tikets/index
+
+ActionView::TemplateError (undefined method `phone' for #<Tiket:0x34a8cbc>) on line #20 of app/views/tikets/index.html.erb:
+17:     <td><%=h tiket.address %></td>
+18:     <td><%=h tiket.price_paid %></td>
+19:     <td><%=h tiket.email_address %></td>
+20:     <td><%=h tiket.phone %></td>
+21:     <td><%= link_to 'Show', tiket %></td>
+22:     <td><%= link_to 'Edit', edit_tiket_path(tiket) %></td>
+23:     <td><%= link_to 'Destroy', tiket, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/tikets/index.html.erb:20
+    app/views/tikets/index.html.erb:13:in `each'
+    app/views/tikets/index.html.erb:13
+    app/controllers/tikets_controller.rb:7:in `index'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (157.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TiketsController#index (for 127.0.0.1 at 2009-08-02 23:32:02) [GET]
+  [4;35;1mTiket Load (0.0ms)[0m   [0mSELECT * FROM "tikets" [0m
+Rendering template within layouts/tikets
+Rendering tikets/index
+
+ActionView::TemplateError (undefined method `phone' for #<Tiket:0x3618b9c>) on line #20 of app/views/tikets/index.html.erb:
+17:     <td><%=h tiket.address %></td>
+18:     <td><%=h tiket.price_paid %></td>
+19:     <td><%=h tiket.email_address %></td>
+20:     <td><%=h tiket.phone %></td>
+21:     <td><%= link_to 'Show', tiket %></td>
+22:     <td><%= link_to 'Edit', edit_tiket_path(tiket) %></td>
+23:     <td><%= link_to 'Destroy', tiket, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/tikets/index.html.erb:20
+    app/views/tikets/index.html.erb:13:in `each'
+    app/views/tikets/index.html.erb:13
+    app/controllers/tikets_controller.rb:7:in `index'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (172.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTikets (20090802150053)
+Migrating to AddPhoneToTikets (20090802153343)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (63.0ms)[0m   [0mALTER TABLE "tikets" ADD "phone" varchar(255)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090802153343')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("tikets")[0m
+
+
+Processing TiketsController#index (for 127.0.0.1 at 2009-08-02 23:34:42) [GET]
+  [4;36;1mTiket Load (0.0ms)[0m   [0;1mSELECT * FROM "tikets" [0m
+Rendering template within layouts/tikets
+Rendering tikets/index
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/tikets]
+
+
+Processing TiketsController#new (for 127.0.0.1 at 2009-08-02 23:35:10) [GET]
+Rendering template within layouts/tikets
+Rendering tikets/new
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/tikets/new]
+
+
+Processing TiketsController#create (for 127.0.0.1 at 2009-08-02 23:36:04) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"NIOc+PcX95/GsJzjMxylhz7Xm9H6xZr7n/y/2ONQVAo=", "tiket"=>{"name"=>"Amir", "seat_id"=>"6B", "price_paid"=>"15.00", "phone"=>"01930000000", "address"=>"Cheras", "email_address"=>"amir@yahoo.com"}}
+  [4;35;1mTiket Create (0.0ms)[0m   [0mINSERT INTO "tikets" ("name", "updated_at", "seat_id", "price_paid", "phone", "address", "email_address", "created_at") VALUES('Amir', '2009-08-02 15:36:04', '6B', 15.0, '01930000000', 'Cheras', 'amir@yahoo.com', '2009-08-02 15:36:04')[0m
+Redirected to http://localhost:3000/tikets/4
+Completed in 218ms (DB: 0) | 302 Found [http://localhost/tikets]
+
+
+Processing TiketsController#show (for 127.0.0.1 at 2009-08-02 23:36:04) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTiket Load (0.0ms)[0m   [0;1mSELECT * FROM "tikets" WHERE ("tikets"."id" = 4) [0m
+Rendering template within layouts/tikets
+Rendering tikets/show
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/tikets/4]
+
+
+Processing TiketsController#index (for 127.0.0.1 at 2009-08-02 23:36:07) [GET]
+  [4;35;1mTiket Load (0.0ms)[0m   [0mSELECT * FROM "tikets" [0m
+Rendering template within layouts/tikets
+Rendering tikets/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/tikets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-14 15:06:32) [GET]
+
+ActionController::RoutingError (No route matches "/ads/new" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-14 15:06:38) [GET]
+
+ActionController::RoutingError (No route matches "/ads/new" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TiketsController#index (for 127.0.0.1 at 2009-08-15 22:16:38) [GET]
+  [4;36;1mTiket Load (16.0ms)[0m   [0;1mSELECT * FROM "tikets" [0m
+Rendering template within layouts/tikets
+Rendering tikets/index
+Completed in 2125ms (View: 2093, DB: 16) | 200 OK [http://localhost/tikets]
+
+
+Processing TiketsController#new (for 127.0.0.1 at 2009-08-15 22:17:32) [GET]
+Rendering template within layouts/tikets
+Rendering tikets/new
+Completed in 109ms (View: 94, DB: 0) | 200 OK [http://localhost/tikets/new]
+
+
+Processing TiketsController#create (for 127.0.0.1 at 2009-08-15 22:18:29) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"FMw4FvCNOgOeeCatfbH6gcMaon3tgB8LCkA2I+Utn40=", "tiket"=>{"name"=>"danish", "seat_id"=>"3C", "price_paid"=>"19.00", "phone"=>"0197878900", "address"=>"Desa tasik", "email_address"=>"danis@yahoo.com"}}
+  [4;35;1mTiket Create (0.0ms)[0m   [0mINSERT INTO "tikets" ("name", "updated_at", "seat_id", "price_paid", "phone", "address", "email_address", "created_at") VALUES('danish', '2009-08-15 14:18:29', '3C', 19.0, '0197878900', 'Desa tasik', 'danis@yahoo.com', '2009-08-15 14:18:29')[0m
+Redirected to http://localhost:3000/tikets/5
+Completed in 266ms (DB: 0) | 302 Found [http://localhost/tikets]
+
+
+Processing TiketsController#show (for 127.0.0.1 at 2009-08-15 22:18:29) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mTiket Load (0.0ms)[0m   [0;1mSELECT * FROM "tikets" WHERE ("tikets"."id" = 5) [0m
+Rendering template within layouts/tikets
+Rendering tikets/show
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/tikets/5]
+
+
+Processing TiketsController#index (for 127.0.0.1 at 2009-08-15 22:18:35) [GET]
+  [4;35;1mTiket Load (0.0ms)[0m   [0mSELECT * FROM "tikets" [0m
+Rendering template within layouts/tikets
+Rendering tikets/index
+Completed in 46ms (View: 15, DB: 0) | 200 OK [http://localhost/tikets]
