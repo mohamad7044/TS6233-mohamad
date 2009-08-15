@@ -1,0 +1,7 @@
+<h1>Senarai Barangan</h1>
+<ul>
+<% for ad in @ads %>
+  <li><a href="/ads/<%= ad.id %>"> <%= ad.img_url %>  <%= ad.heading %>  <a>-->RM</a> <%= ad.price %> </a>
+  </li>
+<% end %>
+</ul>

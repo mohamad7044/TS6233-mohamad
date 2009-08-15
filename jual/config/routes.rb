@@ -1,9 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
-	map.connect ':controller/:action/:id.:format'
-	map.connect '/ads/new', :controller=>'ads', :action=>'new'
-    map.connect '/ads/create', :controller=>'ads', :action=>'new'
-    map.connect '/ads/:id', :controller=>'ads', :action=>'show'
-	map.connect ':controller/:action/:id'
+   map.connect '/ads/:id/delete', :controller=>'ads', :action=>'destroy'
+   map.connect '/ads/:id/edit', :controller=>'ads', :action=>'edit'
+   map.connect '/ads/:id/update', :controller=>'ads', :action=>'update'
+   map.connect '/ads/new', :controller=>'ads', :action=>'new'
+   map.connect '/ads/create', :controller=>'ads', :action=>'create'
+   map.connect '/ads/', :controller=>'ads', :action=>'index'
+   map.connect '/ads/:id', :controller=>'ads', :action=>'show'
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
@@ -42,7 +44,7 @@ ActionController::Routing::Routes.draw do |map|
 
   # Install the default routes as the lowest priority.
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
-  # consider removing or commenting them out if you're using named routes and resources.
+  # consider removing the them or commenting them out if you're using named routes and resources.
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 end
