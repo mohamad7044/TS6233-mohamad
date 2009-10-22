@@ -1,4 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
+   map.connect '/barangs/', :controller=>'barangs', :action=>'index'
    map.connect '/ads/:id/delete', :controller=>'ads', :action=>'destroy'
    map.connect '/ads/:id/edit', :controller=>'ads', :action=>'edit'
    map.connect '/ads/:id/update', :controller=>'ads', :action=>'update'
@@ -6,6 +7,7 @@ ActionController::Routing::Routes.draw do |map|
    map.connect '/ads/create', :controller=>'ads', :action=>'create'
    map.connect '/ads/', :controller=>'ads', :action=>'index'
    map.connect '/ads/:id', :controller=>'ads', :action=>'show'
+   map.connect 'ads/find', :controller=>'ads', :action=>'find'
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

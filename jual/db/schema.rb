@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(:version => 20090808063741) do
     t.integer  "phone_number"
     t.string   "category"
     t.string   "region"
-    t.integer  "post_code"
+    t.string  "post_code"
     t.string   "heading"
     t.text     "ad_text"
     t.decimal  "price"

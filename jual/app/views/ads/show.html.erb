@@ -1,8 +1,9 @@
-<p><br>Barangan yang berjaya didaftarkan.</br><p>
-
+<tr>
+<p><h1>Perincian barangan :</h1><p>
 
 <p>
   <img src="/barang/<%= @ad.img_url %>"/>
+  
 </p>
 <p>
   <b>Nama Penjual:</b><%= @ad.name %>
@@ -14,7 +15,7 @@
   <b>Nombor Telefon:</b><%= @ad.phone_number %>
  </p>
  <p>
-  <b>Poskod:</b><%= @ad.post_code %>
+  <b>Diskaun:</b><%= @ad.post_code %>
  </p>
  <p>
   <b>Barangan:</b><%= @ad.heading %>
@@ -29,4 +30,4 @@
 
 <% form_for(@ad,:url=>{:action=>'edit'}) do |f| %>
  <p><%= f.submit "Kemaskini" %></p>
-<% end %>
+<% end %></tr>

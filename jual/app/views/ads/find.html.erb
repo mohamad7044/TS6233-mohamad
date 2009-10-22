@@ -1,0 +1,16 @@
+<tr>
+
+<p></p><p></p>
+<p><h1>Senarai Carian :</p></h1>
+
+<p>	
+ <% for ad in @ads %>
+ <%= image_tag  ad.img_url,:size=>'200x250'%><p></p>	
+ <%=h ad.heading %>
+
+</p>
+<a href="/ads/<%=ad.id%>">|Lihat|
+<a href="/ads/<%=ad.id%>/edit">|Kemaskini|</a>
+<a href="/ads/<%=ad.id%>/delete">|Padam|</a>
+
+<% end %><p></p><p></p><p></p></tr>
